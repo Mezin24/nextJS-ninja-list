@@ -1,19 +1,24 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 const Navbar = () => {
   return (
-    <header>
-      <div className='nav-logo'>Ninja List</div>
+    <nav>
+      <div className='logo'>
+        <Image src='/logo.png' alt='logo' width={128} height={77} />
+      </div>
       <ul>
         <li>
-          <a href='#'>Home</a>
+          <Link href='/'>Home</Link>
         </li>
         <li>
-          <a href='#'>About</a>
+          <Link href='/about'>About</Link>
         </li>
         <li>
-          <a href='#'>Ninja List</a>
+          <Link href='ninjas'>Ninja List</Link>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 };
 
